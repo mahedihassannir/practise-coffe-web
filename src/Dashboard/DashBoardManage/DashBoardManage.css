@@ -1,0 +1,19 @@
+.sidbarContainer::-webkit-scrollbar, .profiteContainer::-webkit-scrollbar{
+    width: 5px;
+}
+
+.dashboardContainer::-webkit-scrollbar{
+    width: 0px;
+}
+
+.sidbarContainer::-webkit-scrollbar-thumb{
+    background-color: #19D895;
+    border-radius: 5px;
+}
+.grayScroll::-webkit-scrollbar-thumb{
+    background-color: #c8c8c8;
+    border-radius: 5px;
+}
+.sidbarContainer::-webkit-scrollbar-track, .profiteContainer::-webkit-scrollbar{
+    background-color: rgb(243, 243, 243);
+}

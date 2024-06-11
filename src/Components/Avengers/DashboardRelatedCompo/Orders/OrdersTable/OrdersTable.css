@@ -1,0 +1,18 @@
+td, th{
+    text-align: start;
+
+}
+
+td{
+    padding: 20px 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.399);
+    display:  flex;
+    /* align-items: center; */
+}
+
+tr{
+    display: flex;
+    
+    /* text-align: start; */
+    width: 100%;
+}

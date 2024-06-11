@@ -1,0 +1,4 @@
+/* Define the style for active links */
+.active-link {
+  color: red; /* Change the color of active links to red */
+}

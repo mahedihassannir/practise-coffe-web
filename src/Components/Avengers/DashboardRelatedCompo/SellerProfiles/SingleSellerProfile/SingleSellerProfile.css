@@ -1,0 +1,11 @@
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--final-width); /* Use the CSS variable */
+  }
+}
+.animation-width {
+  animation: expandWidth 1s forwards;
+}

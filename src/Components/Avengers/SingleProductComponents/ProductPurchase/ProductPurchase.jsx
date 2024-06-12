@@ -125,7 +125,7 @@ const ProductPurchase = ({ singleProductData }) => {
 			quantity: quantity
 		}
 		// console.log(addToCartData);
-		fetch(`http://localhost:5000/api/v1/user/add_cart?userId=${userProfile?.sanitizedResult?._id}`, {
+		fetch(`http://api.ecom-bd.com/api/v1/user/add_cart?userId=${userProfile?.sanitizedResult?._id}`, {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ const ProductPurchase = ({ singleProductData }) => {
 		// console.log(data);
 		const productId = data.result._id
 		// console.log("wish list data", data);
-		fetch("http://localhost:5000/api/v1/user/wish_list", {
+		fetch("http://api.ecom-bd.com/api/v1/user/wish_list", {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json',
@@ -296,11 +296,11 @@ const ProductPurchase = ({ singleProductData }) => {
 										/>
 									</div>
 
-									<p className='font-normal'>{singleProductData?.result?.price + 150}</p>
+									<p className='font-normal'>{singleProductData?.result?.price + 20}</p>
 									<div className='h-[1px] w-full bg-[#9e9e9e] absolute'></div>
 								</div>
 								<div>
-									<p className='font-semibold'>-60%</p>
+									<p className='font-semibold'>-2.8%</p>
 								</div>
 							</div>
 						</div>

@@ -3,7 +3,7 @@ import { redirect } from 'react-router-dom';
 
 // Create an axios instance
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:5000/api/v1/user',
+    baseURL: 'http://api.ecom-bd.com/api/v1/user',
     headers: {
         'Content-Type': 'application/json'
     }

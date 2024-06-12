@@ -41,7 +41,7 @@ const AccStatement = () => {
 
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/seller/profile`, {
+        const response = await axios.get(`http://api.ecom-bd.com/api/v1/seller/profile`, {
           headers: { Authorization: `Bearer ${sellerAuthToken}` }
         });
         const sellerData = response.data;
@@ -131,7 +131,7 @@ const AccStatement = () => {
     }
 
 
-    fetch(`http://localhost:5000/api/v1/seller/${sellerId}/withdraw_req`, {
+    fetch(`http://api.ecom-bd.com/api/v1/seller/${sellerId}/withdraw_req`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -176,7 +176,7 @@ const AccStatement = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/seller/${sellerId}/payment_history`, {
+        const response = await axios.get(`http://api.ecom-bd.com/api/v1/seller/${sellerId}/payment_history`, {
           headers: { Authorization: `Bearer ${sellerAuthToken}` }
         });
         const historyData = response.data;

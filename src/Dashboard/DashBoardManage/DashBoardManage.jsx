@@ -24,27 +24,28 @@ const DashBoardManage = () => {
 	const userProfile = useUserProfile(user);
 	const isUSer = userProfile?.sanitizedResult?._id;
 	const [seller, SetSeller] = useState(null);
+	console.log(seller);
+	const sellerAuthToken = localStorage.getItem("sellerToken");
 	// get the seller log status;
 	useEffect(() => {
 		const fetchData = async () => {
-			const sellerAuthToken = localStorage.getItem("sellerToken");
 			try {
-				const response = await axios.get(`http://localhost:5000/api/v1/seller/profile`, {
-					headers: { Authorization: `Bearer ${sellerAuthToken}` }
-				});
-				const sellerData = response.data;
-				SetSeller(sellerData);
-				// console.log({ sellerData });
-				// console.log(sellerData);
-				// Set sellerData in your component state or context for rendering.
+				if (sellerAuthToken) {
+					const response = await axios.get(`http://api.ecom-bd.com/api/v1/seller/profile`, {
+						headers: { Authorization: `Bearer ${sellerAuthToken}` }
+					});
+					const sellerData = response.data;
+					SetSeller(sellerData);
+				}
 			} catch (error) {
 				console.error('Error fetching seller data:', error);
-			};
+			}
 		};
 		fetchData();
-	}, []);
+	}, [sellerAuthToken]); // Add sellerAuthToken to the dependency array
+
 	// console.log(seller?.result.identityId);
-	const status = seller?.result.identityId;
+	const status = seller?.result?.identityId;
 	return (
 		<div
 			onClick={() => {
@@ -60,7 +61,7 @@ const DashBoardManage = () => {
 				{/* <SellerDashboard></SellerDashboard>
 				<FantasticSideBar /> */}
 				{/* <AdminSidebar /> */}
-				{seller?.result.identityId && <SellerDashboard />}
+				{seller?.result?.identityId && <SellerDashboard />}
 				{isUSer && <FantasticSideBar />}
 			</div>
 

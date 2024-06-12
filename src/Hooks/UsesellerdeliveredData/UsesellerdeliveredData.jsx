@@ -17,7 +17,7 @@ const UseSellerDeliveredData = () => {
 
         queryFn: async () => {
 
-            const res = await fetch(`http://localhost:5000/api/v1/seller/delivered_data?sellerId=${sellerId}`, {
+            const res = await fetch(`http://api.ecom-bd.com/api/v1/seller/delivered_data?sellerId=${sellerId}`, {
                 headers: { Authorization: `Bearer ${sellerAuthToken}` }
             })
             return res.json();

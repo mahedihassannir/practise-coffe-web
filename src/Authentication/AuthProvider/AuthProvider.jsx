@@ -66,36 +66,6 @@ const AuthProvider = ({ children }) => {
 		return signOut(auth);
 	};
 	// ends
-
-	// this useeffect is watching the user
-	useEffect(() => {
-		const off = onAuthStateChanged(auth, watch => {
-			Setuser(watch)
-
-			console.log(watch.email);
-			// first we see the use if the use is true then save on local storage is false then remove item 
-
-			if (watch) { // if condition 
-
-				axios.post("http://localhost:5000/jwt", { email: watch.email })
-					.then(data => {
-						console.log(data.data.token);
-						localStorage.setItem("token", data.data.token)
-
-					})
-
-			}
-			else {
-				localStorage.removeItem("token")
-			}
-
-			SetLoader(false);
-		});
-
-		return () => {
-			off;
-		};
-	});
 	// this useeffect is watching the user ends
 
 	// user profile update
@@ -117,7 +87,7 @@ const AuthProvider = ({ children }) => {
 		const addToCartData = { singleProductData, email: user.email }
 		// here is the main data for send in the database this is the the product data;
 
-		fetch("http://localhost:5000/addto_cart", {
+		fetch("http://api.ecom-bd.com/addto_cart", {
 			method: "POST",
 			headers: {
 				'content-type': 'application/json'

@@ -18,7 +18,7 @@ const UseUserOrder = () => {
 
         // this is the query function 
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/userOrders?email=${user?.email}`)
+            const res = await fetch(`http://api.ecom-bd.com/userOrders?email=${user?.email}`)
 
             return res.json();
         },

@@ -14,7 +14,7 @@ const UserProgress = () => {
     useEffect(() => {
         const fetchUserProfileData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/v1/user/order_history`, {
+                const response = await fetch(`http://api.ecom-bd.com/api/v1/user/order_history`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

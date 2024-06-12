@@ -56,7 +56,7 @@ const AddProduct = () => {
         setEditorHtml2(html);
     };
 
-    const [imageUrls, setImageUrls] = useState(Array(6).fill('')); // Initialize with empty strings
+    const [imageUrls, setImageUrls] = useState(Array(3).fill('')); // Initialize with empty strings
 
     const key = `890b5ec0923fcc8472f7e690406adc40`
 
@@ -118,7 +118,7 @@ const AddProduct = () => {
 
         // console.log(TotalData);
 
-        fetch(`http://localhost:5000/api/v1/seller/product_add?sellerId=${sellerId}`, {
+        fetch(`http://api.ecom-bd.com/api/v1/seller/product_add?sellerId=${sellerId}`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -155,7 +155,7 @@ const AddProduct = () => {
                           left top
                           no-repeat
                         `
-                      });
+                    });
                 };
                 if (data.code === 401) {
                     toast(` ${data?.message}`, {
@@ -176,12 +176,12 @@ const AddProduct = () => {
 
     // Define subcategories for each main category
     const subcategories = {
-        Food: ['food', "potato", "onion", "grocery"],
+        Food: ['other', "potato", "onion", "grocery"],
         fashion: ['male', 'female'],
-        beauty: ['nails', 'lips', 'eyes', 'face', 'Accessories', 'makeup', 'faceMusk', 'hairTreatment'],
-        homeAcc: ["bedSheets", "hangers", "clocks", "cushions", "wall", "lights"], // Define subcategories for homeAcc if needed
-        kids: ["toys", "other", "baby product"], // Define subcategories for kids if needed
-        low: [], // Define subcategories for low if needed
+        beauty: ['nails', 'lips', 'eyes', 'face', 'Accessories', 'makeup', 'faceMusk', 'hairTreatment', 'other'],
+        homeAcc: ["bedSheets", "hangers", "clocks", "cushions", "wall", "lights", 'other'], // Define subcategories for homeAcc if needed
+        kids: ["toys", "other", "baby product", 'other'], // Define subcategories for kids if needed
+        low: ["other"], // Define subcategories for low if needed
     };
 
 
@@ -339,7 +339,7 @@ const AddProduct = () => {
                                 id="category"
                                 value={selectedCategory}
                                 onChange={handleCategoryChange}
-                                className="block w-full mt-1 p-2 border rounded-md bg-white"
+                                className="block w-full mt-1 p-2 border rounded-md bg-white border-red-500"
                             >
                                 <option value="">Select...</option>
                                 <option value="Food">Food</option>
@@ -363,7 +363,7 @@ const AddProduct = () => {
                                 id="subcategory"
                                 value={selectedCategory2}
                                 onChange={handleCategoryChange2}
-                                className="block w-full mt-1 p-2 border rounded-md bg-white"
+                                className="block w-full mt-1 p-2 border rounded-md bg-white border-red-500"
                             >
                                 <option value="">Select...</option>
                                 {subcategories[selectedCategory].map((subcategory) => (

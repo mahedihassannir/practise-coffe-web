@@ -7,7 +7,7 @@ const UserReturn = () => {
     useEffect(() => {
         const fetchUserProfileData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/v1/user/return`, {
+                const response = await fetch(`http://api.ecom-bd.com/api/v1/user/return`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const UserReturn = () => {
                                 {/* payment */}
                                 <td className=' w-[20%] flex-col items-start'>
                                     <p className=''>
-                                        $<span>{data.totalPrice}</span>
+                                        $<span>{data?.totalPrice}</span>
                                     </p>
                                     <small>
                                         <p className='text-gray-500'></p>
@@ -89,7 +89,7 @@ const UserReturn = () => {
                                 {/* order status  */}
                                 <td className=' w-[20%]'>
                                     <div className='uppercase py-1 px-3 bg-[#035ECF] text-white rounded-md'>
-                                        {data.status}
+                                        {data?.status}
                                     </div>
                                 </td>
                                 {/* rating  */}

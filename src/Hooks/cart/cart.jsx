@@ -13,7 +13,7 @@ const getCart = () => {
 
         queryFn: async () => {
 
-            const res = await fetch(`http://localhost:5000/api/v1/user/cart/${id}`)
+            const res = await fetch(`http://api.ecom-bd.com/api/v1/user/cart/${id}`)
 
             return res.json();
         }

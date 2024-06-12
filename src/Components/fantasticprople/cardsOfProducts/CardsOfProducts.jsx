@@ -18,7 +18,7 @@ const CardsOfProducts = ({ singleProduct, handle }) => {
 
     // console.log("productId", product);
 
-    fetch("http://localhost:5000/recent_views", {
+    fetch("http://api.ecom-bd.com/recent_views", {
       method: "POST",
       headers: {
         "content-type": "application/json"
@@ -43,7 +43,7 @@ const CardsOfProducts = ({ singleProduct, handle }) => {
           <p className='text-[#FC9E66] text-lg font-bold'><span className='font-extrabold'>৳</span>{singleProduct.price}</p>
           {/* price sec ends */}
 
-          <p><del>Tk900</del> -73%</p>
+          <p><del>{singleProduct.price+20}</del> -2.8%</p>
           <div className='flex gap-2'>
             <div className='flex justify-center items-center'>
               <span className='text-yellow-600'><FaStar></FaStar></span>

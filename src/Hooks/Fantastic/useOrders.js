@@ -5,7 +5,7 @@ function useOrders() {
     const [orders, setOrders] = useState([]);
     
       useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('http://api.ecom-bd.com/orders')
           .then(response => response.json())
           .then(data => {
             setOrders(data);

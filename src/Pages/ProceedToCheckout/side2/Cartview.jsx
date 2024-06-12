@@ -28,7 +28,7 @@ const Cartview = ({ productsData }) => {
 
     // useEffect(() => {
 
-    // 	fetch(`http://localhost:5000/carts`)
+    // 	fetch(`http://api.ecom-bd.com/carts`)
     // 		.then(res => res.json())
     // 		.then(data => {
     // 			SetData(data)

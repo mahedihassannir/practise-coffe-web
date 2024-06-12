@@ -53,7 +53,7 @@ const SellerLogin = () => {
 
         try {
 
-            const response = await axios.post("https://api.ecom-bd.com/api/v1/auth/seller/login", { email, password });
+            const response = await axios.post("http://localhost:5000/api/v1/auth/seller/login", { email, password });
 
             // console.log(response.data);
             setRes(response.data)
@@ -62,6 +62,7 @@ const SellerLogin = () => {
                 //  local storage work
                 localStorage.setItem("sellerToken", response.data.data.access_token);
                 localStorage.setItem("sId", response.data.data.profileID);
+                localStorage.setItem("aId", response.data.data.id);
                 // ///
                 if (response?.data?.data?.profileID) {
                     navigate("/dashboard/sellerhome");
@@ -156,13 +157,13 @@ const SellerLogin = () => {
 
 
                         {/* google recaptcha */}
-                        <div className='mt-3'>
+                        {/* <div className='mt-3'>
                             <ReCAPTCHA
                                 sitekey="6Lf68lAoAAAAAMILQYi3JdLblDkyIYKQ_nXk-kGd"
                                 onChange={onChange}
                             />
 
-                        </div>
+                        </div> */}
 
 
 
@@ -170,12 +171,18 @@ const SellerLogin = () => {
                         {/* submit btn  */}
                         <div>
 
-                            <abbr title={captchaValue === null ? "click and verify" : "verified done"}>
+                            {/* <abbr title={captchaValue === null ? "click and verify" : "verified done"}>
 
                                 <button type="submit" disabled={!captchaValue} className={`py-2 w-full mt-4  rounded  font-bold ${captchaValue === null ? "bg-gray-500" : "bg-[#F97316]"}`}>
                                     Next
                                 </button>
-                            </abbr>
+                            </abbr> */}
+                            {/* <abbr title={captchaValue === null ? "click and verify" : "verified done"}> */}
+
+                            <button type="submit" className={`py-2 w-full mt-4  rounded  font-bold   bg-[#F97316]`}>
+                                Next
+                            </button>
+                            {/* </abbr> */}
 
 
 

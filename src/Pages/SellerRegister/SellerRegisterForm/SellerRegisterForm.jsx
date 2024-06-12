@@ -64,7 +64,7 @@ const SellerRegisterForm = () => {
 
 
 		// console.log({ name, email, password });
-		fetch(`https://api.ecom-bd.com/api/v1/auth/seller/register`, {
+		fetch(`http://localhost:5000/api/v1/auth/seller/register`, {
 			method: "POST",
 			headers: {
 				"content-type": "application/json"
@@ -189,13 +189,13 @@ const SellerRegisterForm = () => {
 						</span>
 
 						{/* google recaptcha */}
-						<div className='mt-3'>
+						{/* <div className='mt-3'>
 							<ReCAPTCHA
 								sitekey="6Lf68lAoAAAAAMILQYi3JdLblDkyIYKQ_nXk-kGd"
 								onChange={onChange}
 							/>
 
-						</div>
+						</div> */}
 
 
 
@@ -203,13 +203,17 @@ const SellerRegisterForm = () => {
 						{/* submit btn  */}
 						<div>
 
-							<abbr title={captchaValue === null ? "click and verify" : "verified done"}>
+							{/* <abbr title={captchaValue === null ? "click and verify" : "verified done"}>
 
 								<button type="submit" disabled={!captchaValue} className={`py-2 w-full mt-4  rounded  font-bold ${captchaValue === null ? "bg-gray-500" : "bg-[#F97316]"}`}>
 									Next
 								</button>
-							</abbr>
-
+							</abbr> */}
+							
+								<button type="submit"  className={`py-2 w-full mt-4  rounded  font-bold   bg-[#F97316]`}>
+									Next
+								</button>
+						
 
 
 						</div>

@@ -92,7 +92,7 @@ const UserOrderedProducts = () => {
             confirmButtonText: 'yes, save!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.put('https://api.ecom-bd.com/customerInfo', AllValue)
+                axios.put('http://localhost:5000/customerInfo', AllValue)
                     .then(response => {
                         // console.log('Data sent successfully:', response.data);
                     })

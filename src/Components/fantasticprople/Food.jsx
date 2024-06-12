@@ -95,7 +95,7 @@ const Food = () => {
     }
 
     if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) return <div>Error: {"There are no products in the food category"}</div>;
 
     return (
         <section>

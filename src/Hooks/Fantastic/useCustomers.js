@@ -13,7 +13,7 @@ const useCustomers = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://api.ecom-bd.com/customerInfo')
+    fetch('http://localhost:5000/customerInfo')
       .then(response => response.json())
       .then(data => {
         setCustomers(data);

@@ -9,7 +9,7 @@ const UseOrders = () => {
 
         queryFn: async () => {
 
-            const res = await fetch(`https://api.ecom-bd.com/api/v1/seller/orders?sellerId=${id}`, {
+            const res = await fetch(`http://localhost:5000/api/v1/seller/orders?sellerId=${id}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${sellerAuthToken}`

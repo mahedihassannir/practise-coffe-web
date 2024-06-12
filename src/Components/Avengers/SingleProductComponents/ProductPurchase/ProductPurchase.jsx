@@ -125,7 +125,7 @@ const ProductPurchase = ({ singleProductData }) => {
 			quantity: quantity
 		}
 		// console.log(addToCartData);
-		fetch(`https://api.ecom-bd.com/api/v1/user/add_cart?userId=${userProfile?.sanitizedResult?._id}`, {
+		fetch(`http://localhost:5000/api/v1/user/add_cart?userId=${userProfile?.sanitizedResult?._id}`, {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json',
@@ -155,7 +155,7 @@ const ProductPurchase = ({ singleProductData }) => {
 		// console.log(data);
 		const productId = data.result._id
 		// console.log("wish list data", data);
-		fetch("https://api.ecom-bd.com/api/v1/user/wish_list", {
+		fetch("http://localhost:5000/api/v1/user/wish_list", {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json',

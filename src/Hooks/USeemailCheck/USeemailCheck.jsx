@@ -20,7 +20,7 @@ const USeemailCheck = () => {
         enabled: !loader,
 
         queryFn: async () => {
-            const res = await fetch(`https://api.ecom-bd.com/seller_register_data?email=${user?.email}`, {
+            const res = await fetch(`http://localhost:5000/seller_register_data?email=${user?.email}`, {
                 headers: { authorization: `barer ${token}` }
             });
 

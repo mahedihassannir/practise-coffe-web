@@ -2873,7 +2873,7 @@ hasown@^2.0.0:
   dependencies:
     function-bind "^1.1.2"
 
-hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -4156,9 +4156,9 @@ promzard@^1.0.0:
   dependencies:
     read "^3.0.1"
 
-prop-types@^15.5.0, prop-types@^15.6.2, prop-types@^15.8.1:
+prop-types@^15.5.0, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.8.1:
   version "15.8.1"
-  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
   dependencies:
     loose-envify "^1.4.0"
@@ -4601,6 +4601,13 @@ react-ga4@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-ga4/-/react-ga4-2.1.0.tgz#56601f59d95c08466ebd6edfbf8dede55c4678f9"
   integrity sha512-ZKS7PGNFqqMd3PJ6+C2Jtz/o1iU9ggiy8Y8nUeksgVuvNISbmrQtJiZNvC/TjDsqD0QlU5Wkgs7i+w9+OjHhhQ==
 
+react-google-recaptcha-v3@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.10.1.tgz#5b125bc0dec123206431860e8800e188fc735aff"
+  integrity sha512-K3AYzSE0SasTn+XvV2tq+6YaxM+zQypk9rbCgG4OVUt7Rh4ze9basIKefoBz9sC0CNslJj9N1uwTTgRMJQbQJQ==
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
+
 react-google-recaptcha@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-3.1.0.tgz#44aaab834495d922b9d93d7d7a7fb2326315b4ab"
@@ -4623,6 +4630,13 @@ react-is@^18.2.0:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
+
+react-messenger-customer-chat@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/react-messenger-customer-chat/-/react-messenger-customer-chat-0.8.0.tgz#c0696af9f71d5804a1b1149ae67d672802dee15d"
+  integrity sha512-7HItF+2nElXCBLi1q5eccgE9X4P86BmjmzF5nBcok+hJNWVjdKJTdWxl9VZTQnjkp3GHB7WwTwN2l3d/RKmFuQ==
+  dependencies:
+    prop-types "^15.6.0"
 
 react-quill@^2.0.0:
   version "2.0.0"

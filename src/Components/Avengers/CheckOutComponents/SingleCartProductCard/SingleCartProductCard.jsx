@@ -24,7 +24,7 @@ const SingleCartProductCard = ({ singleProductData }) => {
 
 		// console.log(id);
 
-		fetch(`https://api.ecom-bd.com/api/v1/user/cart?cartId=${id}`, {
+		fetch(`http://localhost:5000/api/v1/user/cart?cartId=${id}`, {
 			method: "DELETE",
 			headers: { Authorization: `Bearer ${authToken}` }
 

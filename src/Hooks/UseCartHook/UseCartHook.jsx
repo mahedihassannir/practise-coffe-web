@@ -18,7 +18,7 @@
 
 //         queryFn: async () => {
 
-//             const res = await fetch(`https://api.ecom-bd.com/api/v1/user/cart?userId=${id}`, {
+//             const res = await fetch(`http://localhost:5000/api/v1/user/cart?userId=${id}`, {
 //                 headers: { Authorization: `Bearer ${authToken}` }
 //             })
 
@@ -62,7 +62,7 @@
 //         queryFn: async () => {
 //             if (!id || cartStatus !== 'added') return [];
 
-//             const res = await fetch(`https://api.ecom-bd.com/api/v1/user/cart?userId=${id}`, {
+//             const res = await fetch(`http://localhost:5000/api/v1/user/cart?userId=${id}`, {
 //                 headers: { Authorization: `Bearer ${authToken}` }
 //             });
 

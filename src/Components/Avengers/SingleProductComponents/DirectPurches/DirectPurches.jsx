@@ -146,7 +146,7 @@ const DirectPurches = () => {
         // console.log("data fom paymentDetails", { data });
         try {
             // handle the product buy 
-            fetch("https://api.ecom-bd.com/api/v1/user/buy_product", {
+            fetch("http://localhost:5000/api/v1/user/buy_product", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -199,7 +199,7 @@ const DirectPurches = () => {
         try {
 
 
-            fetch("https://api.ecom-bd.com/order", {
+            fetch("http://localhost:5000/order", {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(data),

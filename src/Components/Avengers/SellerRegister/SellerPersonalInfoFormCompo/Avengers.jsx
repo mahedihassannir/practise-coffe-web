@@ -13,7 +13,8 @@ import Swal from 'sweetalert2'
 
 
 const Avengers = () => {
-
+	const sellerId = localStorage.getItem("aId")
+	console.log(sellerId);
 	const sellerAuthToken = localStorage.getItem("sellerToken");
 	// console.log(sellerAuthToken);
 
@@ -138,7 +139,7 @@ const Avengers = () => {
 
 		// console.log("this data is come from the 85 num line", allData);
 
-		fetch(`https://api.ecom-bd.com/api/v1/auth/seller/profile_create`, {
+		fetch(`http://localhost:5000/api/v1/auth/seller/profile_create?sellerId=${sellerId}`, {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/json',
@@ -161,8 +162,8 @@ const Avengers = () => {
 					});
 
 					// navigate('/seller_account_created_dome');
-					navigate("/dashboard/dashboard/sellerhome")
-                
+					navigate("/dashboard/sellerhome")
+
 				}
 				else {
 					return
@@ -175,9 +176,6 @@ const Avengers = () => {
 	return (
 		<div className='md:w-11/12 py-4 bg-blue-50 mx-4 mx-auto md:my-4 '>
 			<div>
-
-
-
 				{/* this div is for the center branding */}
 				<div className=" text-center pt-3">
 					{/* img */}
@@ -185,13 +183,11 @@ const Avengers = () => {
 						<img className=' h-20 w-20  rounded-full' src="https://i.ibb.co/P9tbKgZ/logo.jpg" alt="" />
 					</div>
 					{/* img ends */}
-
 					<div className="">
 
 						<h3 className='text-3xl font-semibold  select-none'>E-Commerce Registration Form</h3>
 						<p className='pt-2  select-none'>Please fill the following form with your personal information</p>
 					</div>
-
 				</div>
 				<hr className='pt-1 mt-3 bg-gray-500' />
 				{/* this div is for the center branding ends */}
@@ -285,7 +281,7 @@ const Avengers = () => {
 									<input className='hidden' onChange={handleimageWithnew} type="file" ref={imageRef} />
 									 */}
 								<div className=''>
-									<h1 className='pb-2 text-green-600'>Upload Your Store Image</h1>
+									<h1 className='pb-2 text-green-600'>Upload Nid Image</h1>
 									{imageUrls.map((url, index) => (
 										<div key={index} className="flex m-2 justify-center items-center border border-dashed border-orange-600 w-24 h-32">
 											<img className="w-full object-cover h-32 " src={url} alt="" />

@@ -100,7 +100,7 @@ const UserAddressForm = () => {
 
         // send customer info to db
         setLoader(true)
-        axios.put('https://api.ecom-bd.com/api/v1/user/address', AllValue, {
+        axios.put('http://localhost:5000/api/v1/user/address', AllValue, {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${authToken}`

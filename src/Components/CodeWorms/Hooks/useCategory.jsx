@@ -5,7 +5,7 @@ const useCategory = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        fetch('http://api.ecom-bd.com/allcategory')
+        fetch('https://api.ecom-bd.com/allcategory')
         .then(res => res.json())
         .then(data => {
             setCategory(data)

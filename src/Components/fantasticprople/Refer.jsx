@@ -22,7 +22,7 @@ const Refer = () => {
         const referInp = form.referinp.value
         // console.log(referInp);
 
-        fetch(`http://api.ecom-bd.com/api/v1/auth/user/referral?userId=${id}`, {
+        fetch(`https://api.ecom-bd.com/api/v1/auth/user/referral?userId=${id}`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

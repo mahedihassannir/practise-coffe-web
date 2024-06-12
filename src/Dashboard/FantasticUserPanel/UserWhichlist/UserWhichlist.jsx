@@ -14,7 +14,7 @@ const UserWhichlist = () => {
     useEffect(() => {
         const fetchUserProfileData = async () => {
             try {
-                const response = await fetch(`http://api.ecom-bd.com/api/v1/user/wish_list?userId=${userProfile?.sanitizedResult?._id}`, {
+                const response = await fetch(`https://api.ecom-bd.com/api/v1/user/wish_list?userId=${userProfile?.sanitizedResult?._id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

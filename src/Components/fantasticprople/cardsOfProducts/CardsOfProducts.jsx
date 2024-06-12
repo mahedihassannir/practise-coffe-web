@@ -18,7 +18,7 @@ const CardsOfProducts = ({ singleProduct, handle }) => {
 
     // console.log("productId", product);
 
-    fetch("http://api.ecom-bd.com/recent_views", {
+    fetch("https://api.ecom-bd.com/recent_views", {
       method: "POST",
       headers: {
         "content-type": "application/json"

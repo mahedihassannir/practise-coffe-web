@@ -41,7 +41,7 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
 		setSearchTerm(input);
 
 		try {
-			const response = await axios.get(`http://api.ecom-bd.com/suggestions?search=${input}`);
+			const response = await axios.get(`https://api.ecom-bd.com/suggestions?search=${input}`);
 			setSuggestions(response.data);
 			// console.log("41", response.data);
 		} catch (error) {
@@ -59,7 +59,7 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
 
 
 
-			const response = await axios.get(`http://api.ecom-bd.com/api/v1/user/search?query=${searchTerm}`, {
+			const response = await axios.get(`https://api.ecom-bd.com/api/v1/user/search?query=${searchTerm}`, {
 				headers: { Authorization: `Bearer ${authToken}` }
 			});
 			setResults(response.data);
@@ -118,7 +118,7 @@ const Nav = ({ isNavOpen, setIsNavOpen }) => {
 
 
 			try {
-				const response = await axios.get(`http://api.ecom-bd.com/api/v1/seller/profile`, {
+				const response = await axios.get(`https://api.ecom-bd.com/api/v1/seller/profile`, {
 					headers: { Authorization: `Bearer ${sellerAuthToken}` }
 				});
 				const sellerData = response.data;

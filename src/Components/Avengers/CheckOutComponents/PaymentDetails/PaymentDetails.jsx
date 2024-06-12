@@ -81,7 +81,7 @@ const PaymentDetails = ({ cartData }) => {
 
     try {
       // handle the product buy 
-      fetch("http://api.ecom-bd.com/api/v1/user/buy_product", {
+      fetch("https://api.ecom-bd.com/api/v1/user/buy_product", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

@@ -26,7 +26,7 @@ const OrderManage = () => {
     // console.log(productId);
     // console.log(userId);
     axios.post(
-      `http://api.ecom-bd.com/api/v1/seller/orders/${productId}/delivered?sellerId=${id}`,
+      `https://api.ecom-bd.com/api/v1/seller/orders/${productId}/delivered?sellerId=${id}`,
       { userId },
       {
         headers: {

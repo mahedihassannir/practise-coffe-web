@@ -16,7 +16,7 @@ const UseRecentAcivity = () => {
 
         queryFn: async () => {
 
-            const res = await fetch(`http://api.ecom-bd.com/recent_views?email=${user?.email}`)
+            const res = await fetch(`https://api.ecom-bd.com/recent_views?email=${user?.email}`)
 
             return res.json();
         }

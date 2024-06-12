@@ -53,7 +53,7 @@ const SellerLogin = () => {
 
         try {
 
-            const response = await axios.post("http://api.ecom-bd.com/api/v1/auth/seller/login", { email, password });
+            const response = await axios.post("https://api.ecom-bd.com/api/v1/auth/seller/login", { email, password });
 
             // console.log(response.data);
             setRes(response.data)

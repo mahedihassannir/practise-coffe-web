@@ -29,7 +29,7 @@ const UserReview = () => {
     //     e.preventDefault();
     //     console.log('Review data:', review);
     //     try {
-    //         const response = await fetch(`http://api.ecom-bd.com/api/v1/seller/add_review?sellerId=${sellerId}&user=${user}`, {
+    //         const response = await fetch(`https://api.ecom-bd.com/api/v1/seller/add_review?sellerId=${sellerId}&user=${user}`, {
     //             method: 'POST',
     //             headers: {
     //                 'Content-Type': 'application/json'

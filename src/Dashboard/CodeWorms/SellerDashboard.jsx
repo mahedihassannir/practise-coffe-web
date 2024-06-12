@@ -50,7 +50,7 @@ const SellerDashboard = () => {
 
 
             try {
-                const response = await axios.get(`http://api.ecom-bd.com/api/v1/seller/profile`, {
+                const response = await axios.get(`https://api.ecom-bd.com/api/v1/seller/profile`, {
                     headers: { Authorization: `Bearer ${sellerAuthToken}` }
                 });
                 const sellerData = response.data;

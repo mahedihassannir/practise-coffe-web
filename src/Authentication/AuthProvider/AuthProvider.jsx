@@ -87,7 +87,7 @@ const AuthProvider = ({ children }) => {
 		const addToCartData = { singleProductData, email: user.email }
 		// here is the main data for send in the database this is the the product data;
 
-		fetch("http://api.ecom-bd.com/addto_cart", {
+		fetch("https://api.ecom-bd.com/addto_cart", {
 			method: "POST",
 			headers: {
 				'content-type': 'application/json'

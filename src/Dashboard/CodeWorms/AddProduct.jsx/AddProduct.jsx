@@ -118,7 +118,7 @@ const AddProduct = () => {
 
         // console.log(TotalData);
 
-        fetch(`http://api.ecom-bd.com/api/v1/seller/product_add?sellerId=${sellerId}`, {
+        fetch(`https://api.ecom-bd.com/api/v1/seller/product_add?sellerId=${sellerId}`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

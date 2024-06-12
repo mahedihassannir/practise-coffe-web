@@ -12,7 +12,7 @@
 //     useEffect(() => {
 //         const fetchData = async () => {
 //             try {
-//                 const response = await axios.get(`http://api.ecom-bd.com/api/v1/user/profile`, {
+//                 const response = await axios.get(`https://api.ecom-bd.com/api/v1/user/profile`, {
 //                     headers: { Authorization: `Bearer ${authToken}` }
 //                 });
 //                 const userData = response.data;
@@ -63,7 +63,7 @@ const UserPrivateRoute = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://api.ecom-bd.com/api/v1/user/profile`, {
+                const response = await axios.get(`https://api.ecom-bd.com/api/v1/user/profile`, {
                     headers: { Authorization: `Bearer ${authToken}` }
                 });
                 const userData = response.data;

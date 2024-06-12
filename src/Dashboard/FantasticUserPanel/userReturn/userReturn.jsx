@@ -7,7 +7,7 @@ const UserReturn = () => {
     useEffect(() => {
         const fetchUserProfileData = async () => {
             try {
-                const response = await fetch(`http://api.ecom-bd.com/api/v1/user/return`, {
+                const response = await fetch(`https://api.ecom-bd.com/api/v1/user/return`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

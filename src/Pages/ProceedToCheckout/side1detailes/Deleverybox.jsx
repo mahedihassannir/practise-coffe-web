@@ -71,7 +71,7 @@ const Deleverybox = ({ singleProductData }) => {
         };
 
         // console.log("data fom Deleverybox", data);
-        fetch("http://api.ecom-bd.com/payment", {
+        fetch("https://api.ecom-bd.com/payment", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

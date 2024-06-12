@@ -64,7 +64,7 @@ const SellerRegisterForm = () => {
 
 
 		// console.log({ name, email, password });
-		fetch(`http://api.ecom-bd.com/api/v1/auth/seller/register`, {
+		fetch(`https://api.ecom-bd.com/api/v1/auth/seller/register`, {
 			method: "POST",
 			headers: {
 				"content-type": "application/json"

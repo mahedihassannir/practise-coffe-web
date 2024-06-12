@@ -23,7 +23,7 @@ const Beauty = () => {
 
     // filter only food related data
     const beautyProducts = products?.result?.filter(product => product.category === "beauty");
-    console.log(beautyProducts);
+    // console.log(beautyProducts);
     if (beautyProducts) {
         console.log / ("There are products in the beauty category.");
     } else {

@@ -9,8 +9,8 @@ const ChatBot = () => {
         <div>
 
             <MessengerCustomerChat
-                pageId="133608379834428"
-                appId="679511170788343"
+                pageId="289772450891807"
+                appId="984088086704602"
 
             />,
 

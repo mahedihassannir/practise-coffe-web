@@ -97,7 +97,7 @@ const AuthProvider = ({ children }) => {
 		})
 			.then(res => res.json())
 			.then(resdata => {
-				console.log(resdata);
+				// console.log(resdata);
 			})
 
 
@@ -135,12 +135,12 @@ const AuthProvider = ({ children }) => {
 	};
 
 	const [totalCart, setTotalCart] = useState(0);
-	console.log({ totalCart });
+	// console.log({ totalCart });
 	useEffect(() => {
 		const cartValue = JSON.parse(localStorage.getItem("cartProduct"));
 		let totalCart = 0;
 		for (let key in cartValue) {
-			console.log(cartValue[key]);
+			// console.log(cartValue[key]);
 			totalCart += cartValue[key];
 		}
 

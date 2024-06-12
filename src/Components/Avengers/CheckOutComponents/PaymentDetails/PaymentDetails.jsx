@@ -30,7 +30,7 @@ const PaymentDetails = ({ cartData }) => {
   const [isInputEmpty, setIsInputEmpty] = useState(true);
 
   const { result } = cart;
-  console.log(address?.result?.address?._id);
+  // console.log(address?.result?.address?._id);
 
   refetch();
 

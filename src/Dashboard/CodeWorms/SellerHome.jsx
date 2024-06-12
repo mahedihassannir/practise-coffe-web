@@ -27,7 +27,7 @@ const SellerHome = () => {
 
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/seller/profile`, {
+        const response = await axios.get(`https://api.ecom-bd.com/api/v1/seller/profile`, {
           headers: { Authorization: `Bearer ${sellerAuthToken}` }
         });
         const sellerData = response.data;

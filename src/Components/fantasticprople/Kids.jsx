@@ -35,10 +35,9 @@ const Kids = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper "
                 >
-                    <SwiperSlide><img className='w-full' src="https://i.ibb.co/Ph1rDtc/Whats-App-Image-2024-05-05-at-11-34-43-AM.jpg" /></SwiperSlide>
-                    <SwiperSlide><img src="https://i.ibb.co/LdDVZKz/Untitled-2.jpg" /></SwiperSlide>
-                    <SwiperSlide><img src="https://i.ibb.co/LdDVZKz/Untitled-2.jpg" /></SwiperSlide>
-                    <SwiperSlide><img src="https://i.ibb.co/LdDVZKz/Untitled-2.jpg" /></SwiperSlide>
+                    {/* <SwiperSlide><img className='w-full md:h-auto h-72' src="https://i.ibb.co/NC76Wp1/meena.jpg" /></SwiperSlide> */}
+                    {/* <SwiperSlide><img className='w-full md:h-96' src="https://i.ibb.co/nC2XnpR/dorimon.webp" /></SwiperSlide> */}
+                    {/* <SwiperSlide><img className='w-full md:h-auto h-72' src="https://i.ibb.co/yNTfn7D/Gopal-Var.jpg" /></SwiperSlide> */}
 
                 </Swiper>
                 <div className="grid grid-cols-6 gap-5 my-10">

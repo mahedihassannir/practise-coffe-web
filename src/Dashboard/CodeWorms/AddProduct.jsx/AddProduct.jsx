@@ -178,10 +178,13 @@ const AddProduct = () => {
     const subcategories = {
         Food: ['other', "potato", "onion", "grocery"],
         fashion: ['male', 'female'],
-        beauty: ['nails', 'lips', 'eyes', 'face', 'Accessories', 'makeup', 'faceMusk', 'hairTreatment', 'other'],
-        homeAcc: ["bedSheets", "hangers", "clocks", "cushions", "wall", "lights", 'other'], // Define subcategories for homeAcc if needed
-        kids: ["toys", "other", "baby product", 'other'], // Define subcategories for kids if needed
-        low: ["other"], // Define subcategories for low if needed
+        beauty: ['nails', 'lips', 'eyes', 'face', 'Accessories', 'makeup', 'faceMusk', 'hairTreatment', 'mensCare', 'soap', 'cream', 'perfume', 'menDeos', 'hairDryers', 'hairColor', 'facial', 'curlerScolor', '', 'other'],
+        homeAcc: ["bedSheets", "hangers", "clocks", "cushions", "wall", "lights", 'other'],
+        kids: ["toys", "other", "baby product", 'other'],
+        headphone: ["other"],
+        laptop: ["other"],
+        mobile: ["other"],
+        spiker: ["spiker"],
     };
 
 
@@ -347,7 +350,10 @@ const AddProduct = () => {
                                 <option value="beauty">Beauty</option>
                                 <option value="homeAcc">Homeacc</option>
                                 <option value="kids">Kids</option>
-                                <option value="low">Low price</option>
+                                <option value="mobile">mobile</option>
+                                <option value="spiker">spiker</option>
+                                <option value="laptop">laptop</option>
+                                <option value="headphone">headphone</option>
                                 {/* Add more options as needed */}
                             </select>
 

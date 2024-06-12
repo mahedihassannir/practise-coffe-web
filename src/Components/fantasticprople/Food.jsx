@@ -115,7 +115,8 @@ const Food = () => {
                     modules={[Autoplay, Pagination, Navigation]}
                     className="mySwiper "
                 >
-                    <SwiperSlide><img className='w-full' src="https://gcp-img.slatic.net/lazada/8f730e50-b4a8-49f1-8f32-65c7ba064da5_BD-1188-344.jpg" alt="" /></SwiperSlide>
+                    {/* <SwiperSlide><img className='w-full' src="https://gcp-img.slatic.net/lazada/8f730e50-b4a8-49f1-8f32-65c7ba064da5_BD-1188-344.jpg" alt="" /></SwiperSlide> */}
+                    {/* <SwiperSlide><img className='w-full' src="https://i.ibb.co/J2vRnDC/boykot-israil.jpg" alt="" /></SwiperSlide> */}
                     <SwiperSlide><img className='w-full' src="https://gcp-img.slatic.net/lazada/cb115603-66b4-4f66-8f52-646caf8d728c_BD-1188-344.jpg" alt="" /></SwiperSlide>
                     <SwiperSlide><img className='w-full' src="https://gcp-img.slatic.net/lazada/514f9952-7f9f-4cf3-9ef1-b717ffdf93de_BD-1188-344.jpg" alt="" /></SwiperSlide>
                 </Swiper>
